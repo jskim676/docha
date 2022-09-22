@@ -1,8 +1,8 @@
 *{margin:0; padding:0; box-sizing: border-box;}
 
 #root {
-  width:100vw;
-  height:100vh;
+  width:100%;
+  height:100%;
 }
 
 .mainImg {
@@ -76,9 +76,11 @@
   margin-top:20px;
 }
 
+/* 공용 상단 */
+
 header {
   width:100%;
-  height:140px;
+  height:130px;
   position:relative;
   z-index: 2;
 }
@@ -109,7 +111,7 @@ header .topBar > div > img {
   margin-right:50px;
 }
 
-header .topBar  h1 {
+header .topBar h1 {
   color:white;
   font-size: 20px;
 }
@@ -117,7 +119,7 @@ header .topBar  h1 {
 header .menu {
   width: 100%;
   min-width:768px;
-  height: 80px;
+  height: 70px;
   padding: 0 100px;
   background-color: #ffffff;
   box-shadow: 0px 5px 18px 0px #3d4e84;
@@ -147,24 +149,270 @@ main {
   width:100%;
   min-width: 768px;
   height:100%;
-  padding:0 100px;
+  min-height: 1000px; 
+  padding:40px 100px;
   background-color: #e5e5e5;
+
+  /* display:flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* 메인 */
+
+main .contractList {
+  width:100%;
+  background-color: #ffffff;
+  padding:15px;
+  
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .contractList .search {
+  width:100%;
+
+  display:flex;
+  align-items: center;
+  height:60px;
+}
+
+main .contractList .search h1 {
+  font-size: 22px;
+  padding-right:20px;
+}
+
+main .contractList .search input {
+  width:275px;
+  height:40px;
+  padding:5px 5px 5px 40px; 
+  border:0;
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+main .contractList .search img {
+  position:absolute;
+  margin:8px 0px 5px 8px;
+}
+
+main .contractList .table {
+  width:100%;
+}
+
+main .contractList .table button {
+  width:70px;
+  height:35px;
+  font-weight: bold;
+}
+
+main .contractList .table .rent {
+  background-color: #3d4e84;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-align: center;
+  border:0;
+}
+
+main .contractList .table .reservation {
+  background-color:  #f59a23;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-align: center;
+  border:0;
+}
+
+main .contractList .table .return {
+  background-color:  #aaaaaa;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-align: center;
+  border:0;
+}
+
+main .contractList .pagination {
+  width:300px;
+  height:40px;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  margin-top:20px;
+
+  display:flex;
+}
+
+main .contractList .pagination > button {
+  width:80px;
+  background-color: white;
+  border:0;
+}
+
+main .contractList .pagination > div {
+  width:50px;
 
   display:flex;
   justify-content: center;
   align-items: center;
 }
 
-main .contractList {
-  width:100%;
-  height:90%;
-  background-color: #ffffff;
+main .contractList .pagination .selectPage {
+  background-color:#3d4e84;
+  color:white;
 }
+
+/* 계약서 상세 페이지*/
+main .contractDetail {
+  width:100%;
+}
+
+main .contractDetail .box {
+  background-color: white;
+  box-shadow: 5px 5px 5px 0px #aaaaaa;
+  margin-bottom:25px;
+}
+
+main .contractDetail .serialNumber {
+  padding:10px;
+
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .contractDetail .serialNumber > h1 {
+  font-size: 20px;
+}
+
+main .contractDetail .serialNumber > div {
+  display:flex;
+}
+
+main .contractDetail .serialNumber > div > p {
+  display:flex;
+  align-items: center;
+  font-weight:bold;
+  margin-right:10px;
+}
+
+main .contractDetail .serialNumber .textarea {
+  width: 300px;
+  height: 35px;
+  border:0;
+}
+
+main .contractDetail .input {
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+  color: #333333;
+  text-align: left;
+}
+
+main .memo {
+  width:100%;
+  height:300px;
+
+  display:flex;
+  align-items: center;
+}
+
+.viewMemo {
+  width:65%;
+  height:80%;
+  position:relative;
+  padding: 0px 10px;
+}
+
+.viewMemo .memoScroll {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.typeMemo {
+  width:35%;
+  height:80%;
+  padding: 10px 15px;
+
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.typeMemo > div:nth-child(1) {
+  width:100%;
+
+  display:flex;
+  justify-content: space-between;
+}
+
+.typeMemo > div > p {
+  padding-bottom: 20px;
+}
+
+.typeMemo > div > span {
+  margin-top:25px;
+  font-size: 8px;
+}
+
+
+.typeMemoArea {
+  width: 100%;
+  height:150px;
+  border:0;
+  resize: none;
+  overflow-y: hidden;
+  padding:10px;
+  line-height: 1.5;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+  color: #333333;
+  text-align: left;
+}
+
+.memoList {
+  width:100%;
+  height:50px;
+  padding: 5px;
+  border-bottom: 1px solid #aaaaaa;
+
+  display:flex;
+}
+
+.memoList .memoLine {
+  color:#333333;
+
+  display:flex;
+  align-items: center;
+}
+
+.memoList .memoLine > p {
+  font-size: 14px;
+}
+
+.memoList .memoLine:nth-child(1) > p{
+  width:100px;
+  font-size:12px;
+  color:#8f9bb3;
+}
+
+.memoList .memoLine:nth-child(2) > p{
+  min-width: 100px;
+}
+
+.memoBtn {
+  height: 28px;
+  font-size: 12px;
+  border:0;
+  padding: 0px 10px;
+  margin-top:10px;
+  background-color: #3d4e84;
+  color:white;
+}
+/* 공용 하단 */
 
 footer {
   width:100%;
   min-width: 768px;
-  height:200px;
+  height:160px;
   padding:10px 100px;
   font-size: 12px;
   font-weight: 700;
@@ -185,7 +433,7 @@ footer > div:nth-child(1) > img {
 }
 
 footer > .information {
-  height:130px;
+  height:100px;
 
   display:flex;
   flex-direction: column;
@@ -203,7 +451,6 @@ footer > .information > div > p {
 
 table {
     border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: .8rem;
@@ -211,14 +458,17 @@ table {
 
 td,
 th {
-    border: 1px solid rgb(190, 190, 190);
+    border-bottom: 1px solid rgb(190, 190, 190);
     padding: 5px 10px;
+    text-align: left;
+    font-weight: 600;
 }
 
-td {
-    text-align: center;
-}
 
+th {
+  padding:15px 10px;
+  color: #7f7f7f;
+}
 
 
 
