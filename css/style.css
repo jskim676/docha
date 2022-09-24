@@ -302,14 +302,6 @@ main .contractDetail .serialNumber .textarea {
   border:0;
 }
 
-main .contractDetail .input {
-  background-color: #f2f2f2;
-  box-sizing: border-box;
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
-  color: #333333;
-  text-align: left;
-}
-
 main .memo {
   width:100%;
   height:280px;
@@ -322,13 +314,13 @@ main .memo {
   width:65%;
   height:90%;
   position:relative;
-  padding: 5px 10px;
+  padding: 5px 20px;
 }
 
 .viewMemo h1 {
   font-size: 16px;
   color:#333333;
-  padding:10px 0;
+  padding:5px 10px;
 }
 
 .viewMemo .memoScroll {
@@ -339,21 +331,32 @@ main .memo {
 .typeMemo {
   width:35%;
   height:100%;
-  padding: 10px 15px;
+  padding: 10px 20px;
 
   display:flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.typeMemo > div:nth-child(1) {
-  width:100%;
+.typeMemo .column {
+  position:relative;
 
   display:flex;
+}
+
+.memo .typeMemo > div:nth-child(1) {
+  width: 100%;
+  display: flex;
   justify-content: space-between;
 }
 
-.typeMemo > div > p {
+.typeMemo select {
+  border:0;
+}
+
+.typeMemo > div p {
+  color: #767676;
+    margin-bottom: 10px;
   font-size: 12px;
   padding-top:15px;
 }
@@ -364,9 +367,9 @@ main .memo {
 }
 
 
-.typeMemoArea {
+.typeMemo .typeMemoArea {
   width: 100%;
-  height:180px !important;
+  height:180px;
   border:0;
   resize: none;
   overflow-y: hidden;
@@ -385,7 +388,10 @@ main .memo {
   box-sizing: border-box;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
   color: #333333;
-  text-align: left;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .big {
@@ -406,10 +412,15 @@ main .memo {
 }
 
 .memoList .memoLine {
+  
   color:#333333;
 
   display:flex;
   align-items: center;
+}
+
+.memoList .memoLine:nth-child(1) {
+  padding-right:30px;
 }
 
 .memoList .memoLine > p {
@@ -444,8 +455,44 @@ main .memo {
 }
 
 .detailInfo p {
+  font-size: 12px;
   color:#767676;
   margin-bottom:10px;
+}
+
+.separate {
+  width:100%;
+
+  display:flex;
+  justify-content: space-between;
+}
+
+.separate > div:nth-child(1) {
+  width:60%;
+  position: relative;
+}
+
+.separate > div:nth-child(1) > img {
+  width:16px;
+  height:16px;
+  
+  position:absolute;
+  bottom:5px;
+  right:0;
+}
+
+.separate > div:nth-child(2) {
+  width:30%;
+  position: relative;
+}
+
+.separate > div:nth-child(2) > img {
+  width:16px;
+  height:16px;
+  
+  position:absolute;
+  bottom:5px;
+  right:0;
 }
 
 .info1 {
@@ -512,7 +559,107 @@ main .memo {
   margin:0 2px 0 10px;
 }
 
+main .deposit {
+  width:100%;
+  height:280px;
 
+  display:flex;
+  align-items: center;
+}
+
+.flex {
+  display:flex;
+}
+
+
+.column {
+  display:flex;
+  flex-direction: column;
+}
+
+.deposit .typeMemo {
+  width: 35%;
+  height: 100%;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start
+}
+
+.deposit .typeMemo > div:nth-child(1) {
+  width:100%;
+  
+  display:flex;
+  justify-content: space-between;
+}
+
+.deposit .typeMemo > div:nth-child(1) > div:nth-child(1) {
+  width:25%;
+  position: relative;
+}
+
+.deposit .typeMemo > div:nth-child(1) > div:nth-child(2) {
+  width:20%;
+}
+
+.deposit .typeMemo > div:nth-child(1) > div:nth-child(2) > div {
+  padding:0 5px;
+  font-size: 12px;
+}
+
+.deposit .typeMemo > div:nth-child(1) > div:nth-child(1) > img {
+  position:absolute;
+  right:0;
+  bottom:5px;
+}
+
+.deposit .typeMemo > div:nth-child(2) {
+  width:40%;
+}
+
+.deposit .typeMemo .column div {
+  width:100%;
+}
+
+.deposit .typeMemoArea {
+  height:90px;
+}
+
+.deposit .typeMemo .flex img {
+  width:16px;
+  height:16px;
+}
+
+.buttonAreaTwo {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 25px;
+
+  justify-content: space-evenly;
+}
+
+.buttonAreaTwo > button {
+  width: 250px;
+  height: 50px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #0eb2a3;
+  box-sizing: border-box;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  line-height: normal;
+}
+
+.buttonAreaTwo > button:nth-child(4) {
+  background-color:  #7f7f7f
+}
+
+.circle {
+  width:200px;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
 
 /* 차량 파손 부위 */
 
@@ -630,7 +777,78 @@ main .memo {
   left:638px;
 }
 
+.buttonArea {
+  width:100%;
+  height:50px;
 
+  margin-bottom:25px;
+}
+
+.buttonArea > button {
+  width: 250px;
+  height: 50px;
+  border:0;
+  border-radius: 5px;
+  background-color: #0eb2a3;
+  box-sizing: border-box;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  line-height: normal;
+}
+
+.photo {
+  width:100%;
+  height:280px;
+
+  display:flex;
+}
+
+.photo h1 {
+  font-size: 16px;
+  color: #333333;
+  padding: 5px 30px;
+}
+
+.photoList {
+
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.photoList > div {
+  width:160px;
+  height:100px;
+  margin:10px;
+
+  position: relative;
+}
+
+.photoList > div > img:nth-child(2) {
+  top:0;
+  right:20px;
+  
+  position:absolute;
+}
+
+.photo > div:nth-child(1) {
+  width:70%;
+  min-width: 1400px;
+  height:300px;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+.photo > div:nth-child(2) {
+  width:25%;
+  height:300px;
+
+  margin-left:50px;
+}
 
 /* 공용 하단 */
 

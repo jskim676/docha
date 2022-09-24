@@ -32,7 +32,7 @@
           <h1>No. 22060001</h1>
           <div>
             <p>담당 직원</p>
-            <input class="textarea input" type="text">
+            <input class="textarea grayBox" type="text">
           </div>
         </div>
         <div class="memo box">
@@ -44,10 +44,7 @@
                   22.09.14 19:40
                 </div>
                 <div class="memoLine">
-                  홍길동 >
-                </div>
-                <div class="memoLine">
-                  메모메모메모
+                  홍길동 > 메모메모메모
                 </div>
               </div>
               <div class="memoList">
@@ -55,10 +52,7 @@
                   22.09.14 19:40
                 </div>
                 <div class="memoLine">
-                  홍길동 >
-                </div>
-                <div class="memoLine">
-                  메모메모메모
+                  홍길동 > 메모메모메모
                 </div>
               </div>
               <div class="memoList">
@@ -66,10 +60,7 @@
                   22.09.14 19:40
                 </div>
                 <div class="memoLine">
-                  홍길동 >
-                </div>
-                <div class="memoLine">
-                  메모메모메모
+                  홍길동 > 메모메모메모
                 </div>
               </div>
               <div class="memoList">
@@ -77,10 +68,7 @@
                   22.09.14 19:40
                 </div>
                 <div class="memoLine">
-                  홍길동 >
-                </div>
-                <div class="memoLine">
-                  메모메모메모
+                  홍길동 > 메모메모메모
                 </div>
               </div>
             </div>
@@ -179,13 +167,29 @@
           </div>
           <div class="info2 box">
             <h1>대여정보</h1>
-            <div>
-              <p>대여일</p>
-              <div class="grayBox"></div>
+            <div class="separate">
+              <div>
+                <p>대여일</p>
+                <div class="grayBox"></div>
+                <img src="img/calendar_icon.svg" alt="">
+              </div>
+              <div>
+                <p>대여시간</p>
+                <div class="grayBox">4:14 PM</div>
+                <img src="img/clock_white_icon.svg" alt="">
+              </div>
             </div>
-            <div>
-              <p>반납일</p>
-              <div class="grayBox"></div>
+            <div class="separate">
+              <div>
+                <p>반납일</p>
+                <div class="grayBox"></div>
+                <img src="img/calendar_icon.svg" alt="">
+              </div>
+              <div>
+                <p>반납시간</p>
+                <div class="grayBox">4:14 PM</div>
+                <img src="img/clock_black_icon.svg" alt="">
+              </div>
             </div>
             <div>
               <div class="checkboxFlex">
@@ -227,8 +231,151 @@
             </div>
           </div>
         </div>
-        <div class="deposit box"></div>
-        <div class="photo box"></div>
+        <div class="deposit box">
+          <div class="viewMemo">
+            <h1>입금 내역</h1>
+            <div class="memoScroll">
+              <div class="memoList">
+                <div class="memoLine">
+                  22.09.14 19:40
+                </div>
+                <div class="memoLine">
+                  홍길동 > 22.09.14 대여료 현금 500,000원
+                </div>
+              </div>
+              <div class="memoList">
+                <div class="memoLine">
+                  22.09.14 19:40
+                </div>
+                <div class="memoLine">
+                  홍길동 > 22.09.14 대여료 현금 500,000원 / 메모메모메모
+                </div>
+              </div>
+              <div class="memoList">
+                <div class="memoLine">
+                  22.09.14 19:40
+                </div>
+                <div class="memoLine">
+                  홍길동 > 22.09.14 대여료 현금 500,000원
+                </div>
+              </div>
+              <div class="memoList">
+                <div class="memoLine">
+                  22.09.14 19:40
+                </div>
+                <div class="memoLine">
+                  홍길동 > 22.09.14 대여료 현금 500,000원
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="typeMemo">
+            <div class="flex">
+              <div class="column">
+                <p>입금일</p>
+                <div class="grayBox"></div>
+                <img src="img/calendar_icon.svg" alt="">
+              </div>
+              <div class="column">
+                <p>구분</p>
+                <div class="grayBox">대여료</div>
+              </div>
+              <div class="circle flex">
+                <img src="img/circle_icon.svg" alt="">현금
+                <img src="img/circle_icon.svg" alt="">카드
+                <img src="img/circle_icon.svg" alt="">기타
+              </div>
+            </div>
+            <div class="column">
+              <p>입금액</p>
+              <div class="grayBox"></div>
+            </div>
+            <div class="separate">
+              <p>입금 내역 메모</p>
+              <span>(0/120자)</span>
+            </div>
+            <input class="typeMemoArea grayBox" 
+                      placeholder="메모를 입력해주세요.">
+            <div>
+                <button class="memoBtn">
+                  입력
+                </button>
+            </div>
+          </div>
+        </div>
+        <div class="buttonArea">
+          <button>사진등록</button>
+          <button>차량 데미지 체크</button>
+        </div>
+        <div class="photo">
+          <div class="box">
+            <h1>차량사진</h1>
+            <div class="photoList">
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+              <div>
+                <img src="img/photo_icon.svg" alt="">
+                <img src="img/x_icon.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="buttonAreaTwo column">
+            <button>저장</button>
+            <button>계약서 전송</button>
+            <button>미서명 계약서 다운</button>
+            <button>완료 계약서 다운</button>
+          </div>
+        </div>
       </div>
     </main>
     <footer>
