@@ -259,6 +259,10 @@ main .contractList .pagination .selectPage {
 }
 
 /* 계약서 상세 페이지*/
+#main {
+  min-height: 1600px;
+}
+
 main .contractDetail {
   width:100%;
 }
@@ -308,7 +312,7 @@ main .contractDetail .input {
 
 main .memo {
   width:100%;
-  height:300px;
+  height:280px;
 
   display:flex;
   align-items: center;
@@ -316,9 +320,15 @@ main .memo {
 
 .viewMemo {
   width:65%;
-  height:80%;
+  height:90%;
   position:relative;
-  padding: 0px 10px;
+  padding: 5px 10px;
+}
+
+.viewMemo h1 {
+  font-size: 16px;
+  color:#333333;
+  padding:10px 0;
 }
 
 .viewMemo .memoScroll {
@@ -328,7 +338,7 @@ main .memo {
 
 .typeMemo {
   width:35%;
-  height:80%;
+  height:100%;
   padding: 10px 15px;
 
   display:flex;
@@ -344,18 +354,19 @@ main .memo {
 }
 
 .typeMemo > div > p {
-  padding-bottom: 20px;
+  font-size: 12px;
+  padding-top:15px;
 }
 
 .typeMemo > div > span {
-  margin-top:25px;
+  margin-top:30px;
   font-size: 8px;
 }
 
 
 .typeMemoArea {
   width: 100%;
-  height:150px;
+  height:180px !important;
   border:0;
   resize: none;
   overflow-y: hidden;
@@ -366,6 +377,23 @@ main .memo {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
   color: #333333;
   text-align: left;
+}
+
+.grayBox {
+  height:30px;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+  color: #333333;
+  text-align: left;
+}
+
+.big {
+  height:120px;
+}
+
+.medium {
+  height:80px;
 }
 
 .memoList {
@@ -407,6 +435,203 @@ main .memo {
   background-color: #3d4e84;
   color:white;
 }
+
+.detailInfo {
+  width:100%;
+  
+  display:flex;
+  justify-content: space-between;
+}
+
+.detailInfo p {
+  color:#767676;
+  margin-bottom:10px;
+}
+
+.info1 {
+  width:15%;
+  height:40%;
+  min-height: 550px;
+  background-color: white;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.info2 {
+  width:25%;
+  height:40%;
+  min-height: 550px;
+  background-color: white;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.info3 {
+  width:15%;
+  height:40%;
+  min-height: 330px;
+  background-color: white;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.detailInfo > div > h1 {
+  width:80%;
+  font-size: 16px;
+}
+
+.detailInfo > div > div {
+  width:80%;
+}
+
+.checkboxFlex {
+  display:flex;
+  justify-content: space-between;
+}
+
+.checkboxFlex div {
+  font-size: 10px;
+  color:#333333;
+
+  display:flex;
+  align-items: center
+}
+
+.checkboxFlex input {
+  width:12px;
+  height:12px;
+  margin:0 2px 0 10px;
+}
+
+
+
+/* 차량 파손 부위 */
+
+.carDamage {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkWin {
+  width:80%;
+  height:95%;
+  min-height:900px;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.checkWin h1 {
+  font-size: 18px;
+  padding:0 8px;
+}
+
+.checkList {
+  width:400px;
+  
+  display:flex;
+  justify-content: space-around;
+}
+
+.checkList > div {
+  display:flex;
+}
+
+.checkList > div > img {
+  position: relative;
+  top:-5px;
+}
+
+.list1 h1 {
+  font-size: 20px;
+  color:#0eb2a3;
+}
+
+.list2 h1 {
+  font-size: 20px;
+  color:#0000ff;
+}
+
+.list3 h1 {
+  font-size: 20px;
+  color: #d9001b;
+}
+
+.list4 h1 {
+  font-size: 20px;
+  color:#f59a23;
+}
+
+.carPhoto {
+  width:850px;
+  height:750px;
+  background-color:  #e5e5e5;
+
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+
+  position: relative;
+}
+
+
+.carPart > img {
+  position:absolute;
+}
+
+.carPart > img:nth-child(1){
+  top:70px;
+  left:185px;
+}
+
+.carPart > img:nth-child(2){
+  top:472px;
+  left:182px;
+}
+
+.carPart > img:nth-child(3){
+  top:152px;
+  left:284px;
+}
+
+.carPart > img:nth-child(4){
+  top:30px;
+  left:455px;
+}
+
+.carPart > img:nth-child(5){
+  top:610px;
+  left:512px;
+}
+
+.carPart > img:nth-child(6){
+  top:69px;
+  left:613px;
+}
+
+.carPart > img:nth-child(7){
+  top:478px;
+  left:607px;
+}
+
+.carPart > img:nth-child(8){
+  top:672px;
+  left:638px;
+}
+
+
+
 /* 공용 하단 */
 
 footer {
