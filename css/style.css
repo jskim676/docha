@@ -1027,6 +1027,10 @@ th {
   .buttonAreaTwo {
     align-items:flex-start;
   }
+
+  .none {
+    display:none;
+  }
 }
 
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
@@ -1145,6 +1149,10 @@ th {
 
   footer {
     padding:10px;
+  }
+
+  .none {
+    display:none;
   }
 }
 
@@ -1280,5 +1288,9 @@ th {
 
   footer {
     padding:10px;
+  }
+
+  .none {
+    display:none;
   }
 }
