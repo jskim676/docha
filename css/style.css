@@ -239,7 +239,7 @@ main .contractList .table .return {
 }
 
 main .contractList .pagination {
-  width:300px;
+  width:250px;
   height:40px;
   border-bottom: 1px solid rgb(200, 200, 200);
   margin-top:20px;
@@ -248,13 +248,13 @@ main .contractList .pagination {
 }
 
 main .contractList .pagination > button {
-  width:80px;
+  width:70px;
   background-color: white;
   border:0;
 }
 
 main .contractList .pagination > div {
-  width:50px;
+  width:40px;
 
   display:flex;
   justify-content: center;
@@ -1180,8 +1180,20 @@ th {
     margin-left:0;
   }
 
+  header .menu li {
+    font-size: 14px;
+  }
+
   main {
     padding:40px 10px;
+  }
+
+  main .contractList .search h1 {
+    font-size: 16px;
+  }
+
+  main .contractList .search input {
+    width:180px;
   }
 
   main .contractDetail .serialNumber > h1 {
@@ -1291,6 +1303,13 @@ th {
   }
 
   .none {
+    display:none;
+  }
+}
+
+/* 갤럭시 폴드 (해상도 ~ 280px)*/
+@media all and (max-width:280px) {
+  .none-fold {
     display:none;
   }
 }
