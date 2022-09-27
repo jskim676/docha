@@ -470,6 +470,7 @@ main .memo {
   
   display:flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .detailInfo p {
@@ -607,44 +608,52 @@ main .deposit {
   width:100%;
   
   display:flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
-.deposit .typeMemo > div:nth-child(1) > div:nth-child(1) {
-  width:25%;
+.deposit .typeMemo > .flex > div:nth-child(1) {
+  margin-bottom: 10px;
+
+  display:flex;
+  justify-content: space-between;
+}
+
+.deposit .typeMemo > .flex > div:nth-child(1) > div:nth-child(1) {
+  width:50%;
   position: relative;
 }
 
-.deposit .typeMemo > div:nth-child(1) > div:nth-child(2) {
-  width:20%;
+.deposit .typeMemo > .flex > div:nth-child(1) > div:nth-child(2) {
+  width:40%;
 }
 
-.deposit .typeMemo > div:nth-child(1) > div:nth-child(2) > div {
+.deposit .typeMemo > .flex > div:nth-child(1) > div:nth-child(2) > div {
   display:flex;
 
   font-size: 12px;
 }
 
-.deposit .typeMemo > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) {
-  width:60px;
+.deposit .typeMemo > .flex > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) {
+  width:66%;
   font-size: 10px;
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.35);
   justify-content: flex-start;
   padding:0 5px;
 }
 
-.deposit .typeMemo > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) {
+.deposit .typeMemo > .flex > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) {
   width:30px;
   border-left:1px solid #333333;
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.35);
 }
 
-.deposit .typeMemo > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > img {
+.deposit .typeMemo > .flex > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > img {
   width:7px;
   height:7px;
 }
 
-.deposit .typeMemo > div:nth-child(1) > div:nth-child(1) > img {
+.deposit .typeMemo > .flex > div:nth-child(1) > div:nth-child(1) > img {
   position:absolute;
   right:0;
   bottom:5px;
@@ -704,7 +713,7 @@ main .deposit {
 }
 
 .circle {
-  width:200px;
+  width:180px;
   justify-content: space-evenly;
   align-items: flex-end;
 }
@@ -713,14 +722,16 @@ main .deposit {
 
 .carDamage {
   display:flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
 .checkWin {
-  width:80%;
+  /* width:80%; */
   height:95%;
   min-height:900px;
+  padding:10px;
+
 
   display:flex;
   flex-direction: column;
@@ -733,13 +744,15 @@ main .deposit {
 }
 
 .checkList {
-  width:400px;
+  /* width:400px; */
   
   display:flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 
 .checkList > div {
+  padding:0 5px;
+
   display:flex;
 }
 
@@ -827,9 +840,9 @@ main .deposit {
 
 .buttonArea {
   width:60%;
-  height:50px;
+  /* height:50px; */
 
-  margin-bottom:25px;
+  /* margin-bottom:25px; */
 }
 
 .buttonArea > button {
@@ -844,6 +857,7 @@ main .deposit {
   color: #ffffff;
   text-align: center;
   line-height: normal;
+  margin-bottom: 25px;
 }
 
 .photo {
@@ -923,7 +937,7 @@ footer > div:nth-child(1) > img {
 }
 
 footer > .information {
-  height:100px;
+  height:150px;
 
   display:flex;
   flex-direction: column;
@@ -963,7 +977,19 @@ th {
 
 
 
+@media all and (min-width:1024px) {
+  .info1 {
+    min-width: 220px;
+  }
 
+  .info2 {
+    min-width: 300px;
+  }
+
+  .info3 {
+    min-width: 220px;
+  }
+}
 
 
 /* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
@@ -1141,6 +1167,8 @@ th {
 
   .buttonArea {
     width:100%;
+    display:flex;
+    flex-direction: column;
   }
 
   .buttonArea > button {
@@ -1152,7 +1180,7 @@ th {
   }
 
   .circle {
-    width:160px;
+    width:180px;
   }
 
   .detailInfo p {
@@ -1257,20 +1285,20 @@ th {
   }
 
   .info1 {
-    width:30%;
+    width:100%;
   }
 
   .info1 img {
-    width:60px;
-    height:48px;
+    width:80px;
+    height:64px;
   }
 
   .info2 {
-    width:65%;
+    width:100%;
   }
 
   .info3 {
-    width:30%;
+    width:100%;
   }
   
   main .deposit {
@@ -1290,7 +1318,7 @@ th {
   }
 
   .photo > div:nth-child(2) {
-    width:40%;
+    width:100%;
   }
 
   .buttonArea {
@@ -1298,8 +1326,9 @@ th {
   }
 
   .buttonArea > button {
-    width:36%;
+    width:100%;
     min-width: 120px;
+    max-width:480px;
   }
 
   .buttonAreaTwo {
@@ -1307,11 +1336,13 @@ th {
   }
   
   .buttonAreaTwo > button {
+    width:100%;
     min-width:120px;  
+    max-width:480px;
   }
 
   .circle {
-    width:160px;
+    width:180px;
   }
 
   .detailInfo p {
@@ -1337,6 +1368,10 @@ th {
     display:none;
   }
 
+  main .contractDetail .serialNumber > h1 {
+    font-size: 14px;
+  }
+
   main .contractList .search h1 {
     font-size: 14px;
   }
@@ -1347,5 +1382,39 @@ th {
 
   main .contractList .search input {
     width:150px;
+  }
+
+  .viewMemo .memoScroll div {
+    font-size: 10px;
+  }
+
+  .info1 {
+    width:100%;
+  }
+
+  .info2 {
+    width:100%;
+  }
+
+  .info3 {
+    width:100%;
+  }
+
+  .buttonArea > button {
+    width:100%;
+    max-width:360px;
+  }
+
+  .buttonAreaTwo > button {
+    width:100%;
+    max-width:360px;
+  }
+
+  .photo > div:nth-child(2) {
+    width:100%;
+  }
+
+  footer > .information > div > p {
+    padding-right: 10px;
   }
 }
