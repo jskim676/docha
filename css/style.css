@@ -744,10 +744,12 @@ main .deposit {
 }
 
 .checkList {
-  /* width:400px; */
-  
-  display:flex;
-  /* justify-content: space-around; */
+  width: 400px;
+  padding: 10px;
+  border: 1px solid #3d4e84;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .checkList > div {
@@ -758,7 +760,6 @@ main .deposit {
 
 .checkList > div > img {
   position: relative;
-  top:-5px;
 }
 
 .list1 h1 {
