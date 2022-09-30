@@ -781,8 +781,13 @@ main .deposit {
   display:flex;
 }
 
-.checkList > div > img {
+/* .checkList > div > img {
   position: relative;
+} */
+
+.checkList > div > button {
+  width:80px;
+  height:30px;
 }
 
 .list1 h1 {
@@ -1470,7 +1475,7 @@ th {
       <div class="checkWin">
         <h1>차량 데미지 체크</h1>
         <div class="checkList">
-          <div class="list1">
+          <!-- <div class="list1">
             <img src="img/scratch_selected.svg" alt="">
             <h1>긁힘</h1>
           </div>
@@ -1485,6 +1490,18 @@ th {
           <div class="list4">
             <img src="img/crooked.svg" alt="">
             <h1>우그러짐</h1>
+          </div> -->
+          <div class="list1">
+            <button class="carDamageBtn">긁힘</button>
+          </div>
+          <div class="list2">
+            <button class="carDamageBtn">파임</button>
+          </div>
+          <div class="list3">
+            <button class="carDamageBtn">찢어짐</button>
+          </div>
+          <div class="list4">
+            <button class="carDamageBtn">우그러짐</button>
           </div>
         </div>
         <div class="carPhoto">

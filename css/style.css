@@ -772,11 +772,19 @@ main .deposit {
   display:flex;
 }
 
-.checkList > div > img {
+/* .checkList > div > img {
   position: relative;
+} */
+
+.checkList > div > button {
+  width:80px;
+  height:30px;
 }
 
-.list1 h1 {
+
+
+
+/* .list1 h1 {
   font-size: 14px;
   color:#0eb2a3;
 }
@@ -794,6 +802,34 @@ main .deposit {
 .list4 h1 {
   font-size: 14px;
   color:#f59a23;
+} */
+
+.list1 button {
+  font-size: 14px;
+  background-color:#0eb2a3;
+  color:white;
+  border:0;
+}
+
+.list2 button {
+  font-size: 14px;
+  background-color:#0000ff;
+  color:white;
+  border:0;
+}
+
+.list3 button {
+  font-size: 14px;
+  background-color: #d9001b;
+  color:white;
+  border:0;
+}
+
+.list4 button {
+  font-size: 14px;
+  background-color:#f59a23;
+  color:white;
+  border:0;
 }
 
 .carPhoto {
@@ -923,6 +959,16 @@ main .deposit {
   width:25%;
   height:250px;
 
+}
+
+.license {
+  height: 28px;
+  font-size: 14px;
+  border: 0;
+  padding: 0px 10px;
+  margin-top: 10px;
+  background-color: #3d4e84;
+  color: white;
 }
 
 /* 공용 하단 */
