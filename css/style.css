@@ -1013,6 +1013,46 @@ footer > .information > div > p {
   font-size: 14px;
 }
 
+.table col:nth-child(1) {
+  width:3%;
+}
+
+.table col:nth-child(2) {
+  width:5%;
+}
+
+.table col:nth-child(3) {
+  width:5%;
+}
+
+.table col:nth-child(4) {
+  width:7%;
+}
+
+.table col:nth-child(5) {
+  width:7%;
+}
+
+.table col:nth-child(6) {
+  width:7%;
+}
+
+.table col:nth-child(7) {
+  width:7%;
+}
+
+.table col:nth-child(8) {
+  width:20%;
+}
+
+.table col:nth-child(9) {
+  width:7%;
+}
+
+.table col:nth-child(10) {
+  width:7%;
+}
+
 
 table {
     border-collapse: collapse;
@@ -1325,6 +1365,46 @@ th {
     flex-direction: column;
   }
 
+  .table col:nth-child(1) {
+    width:0%;
+  }
+
+  .table col:nth-child(2) {
+    width:0%;
+  }
+
+  .table col:nth-child(3) {
+    width:0%;
+  }
+
+  .table col:nth-child(4) {
+    width:0%;
+  }
+
+  .table col:nth-child(5) {
+    width:0%;
+  }
+
+  .table col:nth-child(6) {
+    width:1%;
+  }
+
+  .table col:nth-child(7) {
+    width:1%;
+  }
+
+  .table col:nth-child(8) {
+    width:1%;
+  }
+
+  .table col:nth-child(9) {
+    width:1%;
+  }
+
+  .table col:nth-child(10) {
+    width:1%;
+  }
+
   .viewMemo {
     width:100%;
   }
@@ -1440,6 +1520,8 @@ th {
   .none-mobile {
     display:none;
   }
+
+
 
   main .contractDetail .serialNumber > h1 {
     font-size: 14px;
