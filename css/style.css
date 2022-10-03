@@ -779,6 +779,9 @@ main .deposit {
 .checkList > div > button {
   width:80px;
   height:30px;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color:white;
 }
 
 
@@ -805,31 +808,23 @@ main .deposit {
 } */
 
 .list1 button {
-  font-size: 14px;
-  background-color:#0eb2a3;
-  color:white;
-  border:0;
+  border:1px solid #0eb2a3;
+  color:#0eb2a3;
 }
 
 .list2 button {
-  font-size: 14px;
-  background-color:#0000ff;
-  color:white;
-  border:0;
+  border:1px solid #0000ff;
+  color:#0000ff;
 }
 
 .list3 button {
-  font-size: 14px;
-  background-color: #d9001b;
-  color:white;
-  border:0;
+  border:1px solid #d9001b;
+  color:#d9001b;
 }
 
 .list4 button {
-  font-size: 14px;
-  background-color:#f59a23;
-  color:white;
-  border:0;
+  border:1px solid #f59a23;
+  color:#f59a23;
 }
 
 .carPhoto {
