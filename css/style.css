@@ -23,13 +23,12 @@
 .login {
   width:27%;
   max-width: 350px;
-  height: 480px;
+  height: 402px;
   background-color: #f2f2f2;
   padding:40px;
 
   display:flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -40,6 +39,7 @@
 
 .login > div {
   width:100%;
+  margin-top: 40px;
 }
 
 .login > div > p {
