@@ -21,7 +21,7 @@
 }
 
 .login {
-  width:27%;
+  width:27%;  
   max-width: 350px;
   height: 402px;
   background-color: #f2f2f2;
@@ -783,29 +783,6 @@ main .deposit {
   font-size: 14px;
   background-color:white;
 }
-
-
-
-
-/* .list1 h1 {
-  font-size: 14px;
-  color:#0eb2a3;
-}
-
-.list2 h1 {
-  font-size: 14px;
-  color:#0000ff;
-}
-
-.list3 h1 {
-  font-size: 14px;
-  color: #d9001b;
-}
-
-.list4 h1 {
-  font-size: 14px;
-  color:#f59a23;
-} */
 
 .list1 button {
   border:1px solid #0eb2a3;
