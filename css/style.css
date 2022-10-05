@@ -760,14 +760,14 @@ main .deposit {
 .checkList {
   width: 600px;
   padding: 10px;
-  border: 1px solid #3d4e84;
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
 }
 
 .checkList > div {
-  padding:0 5px;
+  padding:3px;
+  border-radius: 5px;
 
   display:flex;
 }
@@ -781,37 +781,37 @@ main .deposit {
   height:30px;
   border-radius: 5px;
   font-size: 14px;
-  background-color:white;
+  color:white;
 }
 
 .list1 button {
   border:1px solid #b4c7e7;
-  color:#b4c7e7;
+  background-color:#b4c7e7;
 }
 
 .list2 button {
   border:1px solid #f8cbad;
-  color:#f8cbad;
+  background-color:#f8cbad;
 }
 
 .list3 button {
   border:1px solid #ffe699;
-  color:#ffe699;
+  background-color:#ffe699;
 }
 
 .list4 button {
   border:1px solid #c5e0b4;
-  color:#c5e0b4;
+  background-color:#c5e0b4;
 }
 
 .list5 button {
   border:1px solid #2f5597;
-  color:#2f5597;
+  background-color:#2f5597;
 }
 
 .list6 button {
   border:1px solid #ff0000;
-  color:#ff0000;
+  background-color:#ff0000;
 }
 
 .carPhoto {

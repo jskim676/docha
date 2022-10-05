@@ -769,14 +769,14 @@ main .deposit {
 .checkList {
   width: 600px;
   padding: 10px;
-  border: 1px solid #3d4e84;
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
 }
 
 .checkList > div {
-  padding:0 5px;
+  padding:3px;
+  border-radius: 5px;
 
   display:flex;
 }
@@ -790,37 +790,37 @@ main .deposit {
   height:30px;
   border-radius: 5px;
   font-size: 14px;
-  background-color:white;
+  color:white;
 }
 
 .list1 button {
   border:1px solid #b4c7e7;
-  color:#b4c7e7;
+  background-color:#b4c7e7;
 }
 
 .list2 button {
   border:1px solid #f8cbad;
-  color:#f8cbad;
+  background-color:#f8cbad;
 }
 
 .list3 button {
   border:1px solid #ffe699;
-  color:#ffe699;
+  background-color:#ffe699;
 }
 
 .list4 button {
   border:1px solid #c5e0b4;
-  color:#c5e0b4;
+  background-color:#c5e0b4;
 }
 
 .list5 button {
   border:1px solid #2f5597;
-  color:#2f5597;
+  background-color:#2f5597;
 }
 
 .list6 button {
   border:1px solid #ff0000;
-  color:#ff0000;
+  background-color:#ff0000;
 }
 
 .carPhoto {
@@ -1489,22 +1489,22 @@ th {
         <h1>차량 데미지 체크</h1>
         <div class="checkList">
           <div class="list1">
-            <button class="carDamageBtn">긁힘</button>
+            <button class="carDamageBtn" data-btn="1">긁힘</button>
           </div>
           <div class="list2">
-            <button class="carDamageBtn">긁힘</button>
+            <button class="carDamageBtn" data-btn="2">긁힘</button>
           </div>
           <div class="list3">
-            <button class="carDamageBtn">긁힘</button>
+            <button class="carDamageBtn" data-btn="3">긁힘</button>
           </div>
           <div class="list4">
-            <button class="carDamageBtn">긁힘</button>
+            <button class="carDamageBtn" data-btn="4">긁힘</button>
           </div>
           <div class="list5">
-            <button class="carDamageBtn">긁힘</button>
+            <button class="carDamageBtn" data-btn="5">긁힘</button>
           </div>
           <div class="list6">
-            <button class="carDamageBtn">긁힘</button>
+            <button class="carDamageBtn" data-btn="6">긁힘</button>
           </div>
         </div>
         <div class="carPhoto">
@@ -1525,5 +1525,20 @@ th {
       </div>
     </div>
   </div>
+  <script>
+    const checkList = document.getElementsByClassName('checkList')[0];
+    const color = ['#b4c7e7', '#f8cbad', '#ffe699', '#c5e0b4', '#2f5597', '#ff0000'];
+      checkList.addEventListener('click',function(e) {
+        let getDataset = e.target.dataset.btn;
+        for(let i=0; i<checkList.children.length; i++) {
+          if(checkList.children[i].children[0].dataset.btn == getDataset) {
+            checkList.children[i].setAttribute('style',`border:1px solid ${color[i]}`);
+            console.log('hi');
+          } else {
+          checkList.children[i].setAttribute('style','border:1px solid #ffffff');
+          }
+        } 
+      })
+  </script>
 </body>
 </html>
