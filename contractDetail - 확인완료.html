@@ -183,7 +183,7 @@ th .column {
 main .contractList {
   width:100%;
   background-color: #ffffff;
-  padding:20px;
+  padding:15px;
   
   display:flex;
   flex-direction: column;
@@ -195,7 +195,8 @@ main .contractList .search {
 
   display:flex;
   align-items: center;
-  height:60px;
+  height:40px;
+  margin-bottom:15px;
 }
 
 main .contractList .search h1 {
@@ -296,7 +297,7 @@ main .contractDetail .box {
 }
 
 main .contractDetail .serialNumber {
-  padding:10px 20px;
+  padding:10px 15px;
 
   display:flex;
   justify-content: space-between;
@@ -335,9 +336,14 @@ main .memo {
 
 .viewMemo {
   width:65%;
-  height:90%;
+  height:100%;
+  min-height:306px;
   position:relative;
-  padding: 20px;
+  padding: 15px;
+}
+
+.memo2{
+  min-height: 367px;
 }
 
 .viewMemo h1 {
@@ -347,8 +353,13 @@ main .memo {
 }
 
 .viewMemo .memoScroll {
+  height:200px;
   overflow: hidden;
   overflow-y: scroll;
+}
+
+.scroll2 {
+  height:250px !important;
 }
 
 .viewMemo .memoScroll div {
@@ -358,7 +369,7 @@ main .memo {
 .typeMemo {
   width:35%;
   height:100%;
-  padding: 20px;
+  padding: 15px;
 
   display:flex;
   flex-direction: column;
@@ -536,39 +547,39 @@ main .memo {
   width:15%;
   height:40%;
   min-height: 500px;
-  padding:20px;
+  padding:15px;
   background-color: white;
 
   display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .info2 {
   width:25%;
   height:40%;
   min-height: 500px;
-  padding:20px;
+  padding:15px;
   background-color: white;
 
   display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .info3 {
   width:15%;
   height:40%;
   min-height: 280px;
-  padding:20px;
+  padding:15px;
   background-color: white;
 
   display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .detailInfo > div > h1 {
@@ -616,6 +627,91 @@ main .deposit {
   flex-direction: column;
 }
 
+.selectBox2 {
+  position: relative;
+  width: 150px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #f2f2f2;  
+  border: 0;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+.selectBox2  img {
+  width:25px;
+  height:25px;
+  position: relative;
+  top:0px;
+  left:5px;
+}
+
+.selectBox2:after {
+  content: '';
+  display: block; 
+  width: 2px;
+  height: 100%; 
+  position: absolute; 
+  top: 0; 
+  right: 35px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.selectBox2 .label {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  border: 0 none;
+  outline: 0 none;
+  padding-left: 15px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.selectBox2 .optionList {
+  position: absolute; 
+  top: 33px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: .3s ease-in;
+}
+
+.selectBox2.active .optionList {
+  max-height: 500px;
+}
+
+.selectBox2 .optionItem {
+  height:35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+  padding: 5px 15px 5px;
+  transition: .1s;
+
+  display:flex;
+  align-items: center;
+}
+
+.selectBox2 .optionItem:nth-child(4) {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.35);
+}
+
+.selectBox2 .optionItem:nth-child(8) {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.35);
+}
+
+.selectBox2 .optionItem:hover {
+  background-color: #f2f2f2;
+}
+
+.selectBox2 .optionItem:last-child {
+  border-bottom: 0 none;
+}
+
 .column select {
   cursor: pointer;
   width: 100%;
@@ -631,7 +727,7 @@ main .deposit {
 .deposit .typeMemo {
   width: 35%;
   height: 100%;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: flex-start
@@ -947,7 +1043,7 @@ main .deposit {
 
 .photo > div:nth-child(1) {
   width:70%;
-  padding:20px;
+  padding:15px;
 
   display:flex;
   flex-direction: column;
@@ -1655,25 +1751,21 @@ th {
             <div class="separate">
               <div>
                 <p>대여일</p>
-                <input class="grayBox" type="text">
-                <img src="img/calendar_icon.svg" alt="">
+                <input type="date" class="grayBox">
               </div>
               <div>
                 <p>대여시간</p>
-                <div class="grayBox">4:14 PM</div>
-                <img src="img/clock_white_icon.svg" alt="">
+                <input type="time" class="grayBox">
               </div>
             </div>
             <div class="separate">
               <div>
                 <p>반납일</p>
-                <input class="grayBox" type="text">
-                <img src="img/calendar_icon.svg" alt="">
+                <input type="date" class="grayBox">
               </div>
               <div>
                 <p>반납시간</p>
-                <div class="grayBox">4:14 PM</div>
-                <img src="img/clock_black_icon.svg" alt="">
+                <input type="time" class="grayBox">
               </div>
             </div>
             <div>
@@ -1717,9 +1809,9 @@ th {
           </div>
         </div>
         <div class="deposit box">
-          <div class="viewMemo">
+          <div class="viewMemo memo2">
             <h1>입금 내역</h1>
-            <div class="memoScroll">
+            <div class="memoScroll scroll2">
               <div class="memoList">
                 <div class="memoLine">
                   22.09.14 19:40
@@ -1752,6 +1844,14 @@ th {
                   홍길동 > 22.09.14 대여료 현금 500,000원
                 </div>
               </div>
+              <div class="memoList">
+                <div class="memoLine">
+                  22.09.14 19:40
+                </div>
+                <div class="memoLine">
+                  홍길동 > 22.09.14 대여료 현금 500,000원
+                </div>
+              </div>
             </div>
           </div>
           <div class="typeMemo">
@@ -1759,14 +1859,13 @@ th {
               <div>
                 <div class="column">
                   <p>입금일</p>
-                  <input class="grayBox" type="text">
-                  <img src="img/calendar_icon.svg" alt="">
+                  <input type="date" class="grayBox">
                 </div>
                 <div class="column">
                   <p>구분</p>
-                  <div class="selectBox2 ">
+                  <div class="selectBox2 grayBox">
                     <button class="label">대여료</button>
-                    <img src="/img/icon-chevron-down.svg" alt="" onclick="document.querySelector('.selectBox2')">
+                    <img src="/img/icon-chevron-down.svg" alt="" onclick="selectTag()">
                     <ul class="optionList">
                       <li class="optionItem">대여료</li>
                       <li class="optionItem">보증금</li>
@@ -1936,6 +2035,14 @@ th {
       }
     })
     
+    const selectTag = () => {
+      const selectBox =  document.querySelector('.selectBox2');
+      if(!selectBox.classList.contains('active')) {
+        selectBox.classList.add('active')
+      } else {
+        selectBox.classList.remove('active')
+      }
+    }
   </script>
 </body>
 </html>
