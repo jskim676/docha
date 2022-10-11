@@ -616,6 +616,18 @@ main .deposit {
   flex-direction: column;
 }
 
+.column select {
+  cursor: pointer;
+  width: 100%;
+  border: 0;
+  padding: 5px 14px;
+  background-size: 24px 24px;
+  background-color: #f2f2f2;
+  color: #000;
+  font-size: 14px;
+}
+
+
 .deposit .typeMemo {
   width: 35%;
   height: 100%;
@@ -911,7 +923,7 @@ main .deposit {
 }
 
 .photo h1 {
-  font-size: 16px;
+  font-size: 14px;
   color: #333333;
 }
 
@@ -1756,10 +1768,22 @@ th {
                 <div class="column">
                   <p>구분</p>
                   <div>
-                    <div class="grayBox">대여료</div>
+                    <select name="" id="" class="grayBox">
+                      <option value="">대여료</option>
+                      <option value="">보증금</option>
+                      <option value="">유류비</option>
+                      <option value="">탁송비</option>
+                      <option value="">통행료</option>
+                      <option value="">과태료</option>
+                      <option value="">수리비</option>
+                      <option value="">면책금</option>
+                      <option value="">휴차료</option>
+                      <option value="">기타</option>
+                    </select>
+                    <!-- <div class="grayBox">대여료</div>
                     <div class="grayBox">
                       <img src="img/down_icon.svg" alt="">
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -1770,9 +1794,18 @@ th {
                 <input class="grayBox" type="text">
               </div>
                 <div class="circle flex">
-                  <img src="img/circle_icon.svg" alt="">현금
-                  <img src="img/circle_icon.svg" alt="">카드
-                  <img src="img/circle_icon.svg" alt="">기타
+                  <div>
+                    <input type="radio" id="cash" name="payout" value="cash" checked>
+                    <label for="cash">현금</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="card" name="payout" value="card">
+                    <label for="card">카드</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="etc" name="payout" value="etc">
+                    <label for="etc">기타</label>
+                  </div>
                 </div>
             </div>
             <div class="separate">
