@@ -713,10 +713,7 @@ main .deposit {
   height:90px;
 }
 
-.deposit .typeMemo .flex img {
-  width:16px;
-  height:16px;
-}
+
 
 .buttonAreaTwo {
   width: 100%;
@@ -1767,23 +1764,21 @@ th {
                 </div>
                 <div class="column">
                   <p>구분</p>
-                  <div>
-                    <select name="" id="" class="grayBox">
-                      <option value="">대여료</option>
-                      <option value="">보증금</option>
-                      <option value="">유류비</option>
-                      <option value="">탁송비</option>
-                      <option value="">통행료</option>
-                      <option value="">과태료</option>
-                      <option value="">수리비</option>
-                      <option value="">면책금</option>
-                      <option value="">휴차료</option>
-                      <option value="">기타</option>
-                    </select>
-                    <!-- <div class="grayBox">대여료</div>
-                    <div class="grayBox">
-                      <img src="img/down_icon.svg" alt="">
-                    </div> -->
+                  <div class="selectBox2 ">
+                    <button class="label">대여료</button>
+                    <img src="/img/icon-chevron-down.svg" alt="" onclick="document.querySelector('.selectBox2')">
+                    <ul class="optionList">
+                      <li class="optionItem">대여료</li>
+                      <li class="optionItem">보증금</li>
+                      <li class="optionItem">유류비</li>
+                      <li class="optionItem">탁송비</li>
+                      <li class="optionItem">통행료</li>
+                      <li class="optionItem">과태료</li>
+                      <li class="optionItem">수리비</li>
+                      <li class="optionItem">면책금</li>
+                      <li class="optionItem">휴차료</li>
+                      <li class="optionItem">기타</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1917,5 +1912,30 @@ th {
       </div>
     </footer>
   </div>
+  <script>
+    /* 화살표 함수 */
+    const label = document.querySelector('.label');
+    const options = document.querySelectorAll('.optionItem');
+
+    // 클릭한 옵션의 텍스트를 라벨 안에 넣음
+    const handleSelect = (item) => {
+      label.parentNode.classList.remove('active');
+      label.innerHTML = item.textContent;
+    }
+    // 옵션 클릭시 클릭한 옵션을 넘김
+    options.forEach(option => {
+      option.addEventListener('click', () => handleSelect(option))
+    })
+
+    // 라벨을 클릭시 옵션 목록이 열림/닫힘
+    label.addEventListener('click', () => {
+      if(label.parentNode.classList.contains('active')) {
+        label.parentNode.classList.remove('active');
+      } else {
+        label.parentNode.classList.add('active');
+      }
+    })
+    
+  </script>
 </body>
 </html>

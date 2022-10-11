@@ -607,19 +607,90 @@ main .deposit {
   flex-direction: column;
 }
 
-.column select {
+.selectBox2 {
+  position: relative;
+  width: 150px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #f2f2f2;  
+  border: 2px solid rgba(0, 0, 0, 0.35);
+  /* background: url(/img/icon-chevron-down.svg) calc(100% - 7px) center no-repeat; */
+  background-size: 20px;
   cursor: pointer;
-  width: 100%;
-  border: 0;
-  padding: 5px 14px;
-  background-size: 24px 24px;
-  background-color: #f2f2f2;
-  color: #000;
-  font-size: 14px;
 }
 
-.column select > option{
-  
+.selectBox2  img {
+  width:25px;
+  height:25px;
+  position: relative;
+  top:4px;
+  right:5px;
+}
+
+.selectBox2:after {
+  content: '';
+  display: block; 
+  width: 2px;
+  height: 100%; 
+  position: absolute; 
+  top: 0; 
+  right: 35px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.selectBox2 .label {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  border: 0 none;
+  outline: 0 none;
+  padding-left: 15px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.selectBox2 .optionList {
+  position: absolute; 
+  top: 33px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: .3s ease-in;
+}
+
+.selectBox2.active .optionList {
+  max-height: 500px;
+}
+
+.selectBox2 .optionItem {
+  height:35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+  padding: 5px 15px 5px;
+  transition: .1s;
+
+  display:flex;
+  align-items: center;
+}
+
+.selectBox2 .optionItem:nth-child(4) {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.35);
+}
+
+.selectBox2 .optionItem:nth-child(8) {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.35);
+}
+
+.selectBox2 .optionItem:hover {
+  background-color: #f2f2f2;
+}
+
+.selectBox2 .optionItem:last-child {
+  border-bottom: 0 none;
 }
 
 .deposit .typeMemo {
@@ -707,10 +778,7 @@ main .deposit {
   height:90px;
 }
 
-.deposit .typeMemo .flex img {
-  width:16px;
-  height:16px;
-}
+
 
 .buttonAreaTwo {
   width: 100%;
